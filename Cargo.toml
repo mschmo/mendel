@@ -1,0 +1,7 @@
+[package]
+name = "mendel"
+version = "0.0.1"
+authors = ["Matthew Schmoyer <mattschmo@gmail.com>"]
+
+[dependencies]
+rand = "0.5"
