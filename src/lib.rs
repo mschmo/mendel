@@ -1,4 +1,14 @@
-pub mod bag;
+/*!
+The `mendel` crate provides a non-sophisticated way to predict probabilities of population
+selections, such as the odds of selecting a green ball out of a bag of many different colored
+balls or the odds of selecting 2 boys and 1 girl from a classroom.
+`mendel` accomplishes not through (arguably trivial) mathematical probability formulas, but
+rather via running many simulations on the population selections and recording the results.
+*/
+
+mod bag;
+
+pub use bag::Bag;
 
 #[cfg(test)]
 mod tests {
@@ -84,6 +94,13 @@ mod tests {
             s % 2 == 0
         });
         assert!(close_enough(result, 0.5));
+    }
+
+    #[test]
+    fn test_set_max_sims() {
+        let mut bag = Bag::from_range(1, 11);
+        bag.set_max_sims(123);
+        assert_eq!(bag.max_sims, 123);
     }
 
 }

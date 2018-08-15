@@ -1,8 +1,10 @@
 [package]
 name = "mendel"
-version = "0.0.1"
+version = "0.0.2"
 description = "A statistics library that uses simulations to predict odds rather than equations."
 authors = ["Matthew Schmoyer <mattschmo@gmail.com>"]
+homepage = "https://github.com/mschmo/mendel"
+repository = "https://github.com/mschmo/mendel"
 license = "MIT"
 
 [dependencies]
